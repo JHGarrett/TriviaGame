@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon?.ico"/>
+
+    <!-- JQ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <!-- instructions and start button -->
+    <div id="startScreen"> 
+        <div class="start">
+            <img id="trivia" src="assets/images/trivia.jpng.jp2" alt="trivia">
+            <p>You have 30 seconds to answer 10 questions.</p>
+            <br />
+            <button type="button" id="startBtn" class="buttonSubmit">start</button>
+
+        </div>
+    </div>
+
+
+    <!-- results page. will show correct and incorrent # amount -->
+    <div id="answerScreen">
+        <div class="answerBox">
+            <h2>Results of Quiz</h2>
+            <hr />
+            <p id="correctScreen">Correct Answers: </p>
+            <p id="incorrectScreen">Incorrect Answers: </p>
+        </div>
+    </div>
+
+    <!-- Time up results page. will show correct and incorrect # amount -->
+    <div id="noMoreTime">
+        <div class="timebox">
+            <h2 class="timeUp">Sorry, Time Ran Out!</h2>
+            <img id="clock" src="assets/images/time.jp2" alt="clock">
+            <hr />
+            <p>Results of Quiz</p>
+            <p id="timeUpCorrect">Correct Answers: </p>
+            <p id="timeUpIncorrect>">Incorrect Answers: </p>
+        </div>
+    </div>
+
+    <!-- will show the questions and display time remaining -->
+    <div class="container">
+        <header>Trivia Questions!</header>
+        <div class="clock">Time Remaining:
+            <div id="timeLeft">30
+            </div>
+        </div>
+    </div>
+    <div class="questions">
+    </div>
+    <button type="button" id="submitQuiz" class="buttonSubmit" >Submit</button>
+   
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
