@@ -2,10 +2,11 @@
 /* need to get backgroung image to center a little bit better */
 
 body {
-    background-image: url(../images/question.gif);    
+    background-image: url(../images/mark2.gif);    
     font-family: 'Merriweather', serif;
     color: black;
     letter-spacing: 2px;
+    background-size: cover;
 }
 
 img{
