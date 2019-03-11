@@ -79,7 +79,7 @@ var labels = ["one", "two", "three", "four"];
 var startGame = $("#startBtn").on("click", function(){
     $(this).parent().hide();
     $(".container").show();
-    countdown(30);
+    countdown(60);
     questionDisplay();
 });
 // end of start game function
