@@ -73,3 +73,14 @@ var question = [{
 ] 
 // end of questions
 
+var labels = ["one", "two", "three", "four"];
+
+// funtion start game. 
+var startGame = $("#startBtn").on("click", function(){
+    $(this).parent().hide();
+    $(".container").show();
+    countdown(30);
+    questionDisplay();
+});
+// end of start game function
+    
