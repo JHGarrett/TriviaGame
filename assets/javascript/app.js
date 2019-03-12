@@ -113,14 +113,14 @@ var countdown = function(seconds) {
             $(".submitTheButton").hide();
 
             var correctAnswers = 0;
-            var incorretAnswers = 0;
+            var incorrectAnswers = 0;
             for (var i = 0; i < 10; i++){
                 if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct){
                     correctAnswers++;
                 }
                 // end of if statement
                 else {
-                    incorretAnswers++;
+                    incorrectAnswers++;
                 };
                 // end of else statement
             }
@@ -128,7 +128,7 @@ var countdown = function(seconds) {
 
             // will open a new div letting user know that there is no more time and display # of correct and incorrect
             $("#timeUpCorrect").append(correctAnswers);
-            $("#timeUpIncorrect").append(incorretAnswers);
+            $("#timeUpIncorrect").append(incorrectAnswers);
             $("#noMoreTime").fadeIn(1000).show();
             // end of the time div
 
