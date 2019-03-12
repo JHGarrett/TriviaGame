@@ -99,4 +99,15 @@ var questionDisplay = function(){
 }
 // end function question display
 
+// function for the countdown timer
+var countdown = function(seconds) {
+    var timer = setInterval(function() {
+        seconds = seconds - 1;
+        $("#timeLeft").html(seconds);
+        // ends the timer
+        // displays a timeout box if the time = 0
+        if (seconds <= 0){
 
+        }
+    })
+  }
