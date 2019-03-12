@@ -107,7 +107,8 @@ var countdown = function(seconds) {
         // ends the timer
         // displays a timeout box if the time = 0
         if (seconds <= 0){
+            $(".container").fadeOut(500);
 
         }
-    })
+    }, 1000);
   }
