@@ -110,6 +110,7 @@ var countdown = function(seconds) {
         if (seconds <= 0){
             $(".container").fadeOut(500);
             $(".questions").hide();
+            $(".submitTheButton").hide();
 
             var correctAnswers = 0;
             var incorretAnswers = 0;
@@ -136,13 +137,15 @@ var countdown = function(seconds) {
             return;
 
         }
-    }, 100);
+    }, 1000);
     //ends the timer function
 
     // clear timer on submit click
     $("#submitQuiz").on("click", function() {
     clearInterval(timer);
     $(".questions").hide();
+    $(".submitTheButton").hide();
+
     })
 };
 
