@@ -121,9 +121,10 @@ var countdown = function(seconds) {
                 // end of if statement
                 else {
                     incorrectAnswers++;
-                };
+                }
+                }
                 // end of else statement
-            }
+            
             // end of for loop
 
             // will open a new div letting user know that there is no more time and display # of correct and incorrect
