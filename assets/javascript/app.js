@@ -1,5 +1,5 @@
 //  variable to store the questions and answer objects
-
+$(".submitTheButton").hide();
 var questions = [{
     quest: "What programming language is names after a TV show?",
     ans: ["Ruby", "Python", "Java", "Fortran"],
@@ -17,16 +17,16 @@ var questions = [{
 {
     quest: "What year did the US enter WW2?",
     ans: ["1944", "1942", "1974", "1943"],
-    name: "1944",
+    name: "wwii",
     correct: "1944",
-    divClass: ".1944"
+    divClass: ".wwii"
 },
 {
     quest: "How fast could a T-Rex run?",
     ans: ["13mph", "45mph", "63mph", "7mph"],
-    name: "45pmh",
+    name: "trex",
     correct: "45mph",
-    divClass: ".45mph"
+    divClass: ".trex"
 },
 {
     quest: "In the book Moby Dick what was the captains name? ",
@@ -45,16 +45,16 @@ var questions = [{
 {
     quest: "What movie won the Oscar for best picture in 2008?",
     ans: ["The Bourne Ultimatum", "No Country for Old Men", "The Golden Compass", "Jarassic Park"],
-    name: "nCfOm",
+    name: "oscar",
     correct: "No Country for Old Men",
-    divClass: ".noCountry"
+    divClass: ".oscar"
 },
 {
     quest: "In what year was Nintendo founded?",
     ans: ["1889", "1963", "1942", "1981"],
-    name: "1889",
+    name: "nintendo",
     correct: "1889",
-    divClass: ".1889"
+    divClass: ".nintendo"
 },
 {
     quest: "What is the capital of Uzbekistan?",
@@ -81,6 +81,7 @@ var startGame = $("#startBtn").on("click", function(){
     $(".container").show();
     countdown(60);
     questionDisplay();
+    $(".submitTheButton").show();
 });
 // end of start game function
     
@@ -139,6 +140,7 @@ var countdown = function(seconds) {
     // clear timer on submit click
     $("#submitQuiz").on("click", function() {
     clearInterval(timer);
+    $(".questions").hide();
     })
 };
 
@@ -156,7 +158,7 @@ var gradeQuiz = $("#submitQuiz").on("click", function() {
     };  //end for
 
     countdown();
-    $(".container").fadeOut(500);
+    $(".container").fadeOut(1000);
     $("#answerScreen").show();
     $("#correctScreen").append(correctAnswers);
     $("#incorrectScreen").append(incorrectAnswers);
