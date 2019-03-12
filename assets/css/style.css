@@ -103,7 +103,9 @@ img{
 }
 
 .questions {
-    font-size: 25px;    
+    font-size: 25px;
+    background-color:#f1880f; 
+    text-align: center;    
 }
 
 label {

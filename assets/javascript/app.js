@@ -15,60 +15,60 @@ var questions = [{
     divClass: ".bBarker"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester3",
-    correct: "Tester",
-    divClass: ".Tester8"
+    quest: "What year did the US enter WW2?",
+    ans: ["1944", "1942", "1974", "1943"],
+    name: "1944",
+    correct: "1944",
+    divClass: ".1944"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester4",
-    correct: "Tester",
-    divClass: ".Tester7"
+    quest: "How fast could a T-Rex run?",
+    ans: ["13mph", "45mph", "63mph", "7mph"],
+    name: "45pmh",
+    correct: "45mph",
+    divClass: ".45mph"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester5",
-    correct: "Tester",
-    divClass: ".Tester6"
+    quest: "In the book Moby Dick what was the captains name? ",
+    ans: ["Ahab", "Jonathan", "Ishmael", "George"],
+    name: "ahab",
+    correct: "Ahab",
+    divClass: ".ahab"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester6",
-    correct: "Tester",
-    divClass: ".Tester5"
+    quest: "Who wrote the book Gulliver's Travel?",
+    ans: ["Jonathan Swift", "Jules Vern", "James Avery", "Tom Clancey"],
+    name: "jSwift",
+    correct: "Jonathan Swift",
+    divClass: ".jSwift"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester7",
-    correct: "Tester",
-    divClass: ".Tester4"
+    quest: "What movie won the Oscar for best picture in 2008?",
+    ans: ["The Bourne Ultimatum", "No Country for Old Men", "The Golden Compass", "Jarassic Park"],
+    name: "nCfOm",
+    correct: "No Country for Old Men",
+    divClass: ".noCountry"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester8",
-    correct: "Tester",
-    divClass: ".Tester3"
+    quest: "In what year was Nintendo founded?",
+    ans: ["1889", "1963", "1942", "1981"],
+    name: "1889",
+    correct: "1889",
+    divClass: ".1889"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester9",
-    correct: "Tester",
-    divClass: ".Tester2"
+    quest: "What is the capital of Uzbekistan?",
+    ans: ["Moscow", "Uzbek", "Mosul", "Tashkent"],
+    name: "tashkent",
+    correct: "Tashkent",
+    divClass: ".tashkent"
 },
 {
-    quest: "test",
-    ans: ["test", "Tester"],
-    name: "tester0",
-    correct: "Tester",
-    divClass: ".Tester1"
+    quest: "What is the worlds fastest flying Bird?",
+    ans: ["Peregrine Falcon", "Golden Eagle", "Common Swift", "Albatross"],
+    name: "pFalcon",
+    correct: "Peregrine Falcon",
+    divClass: ".pFalcon"
 }
 ] 
 // end of questions
@@ -145,13 +145,13 @@ var countdown = function(seconds) {
 // shows the user the result if they click the submit button
 var gradeQuiz = $("#submitQuiz").on("click", function() {
     var correctAnswers = 0;
-    var wrongAnswers = 0;
+    var incorrectAnswers = 0;
     for (var i = 0; i < 10; i++) {
         if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
             correctAnswers++;
         } //end if
         else {
-            wrongAnswers++;
+            incorrectAnswers++;
         };  //end else
     };  //end for
 
@@ -159,6 +159,6 @@ var gradeQuiz = $("#submitQuiz").on("click", function() {
     $(".container").fadeOut(500);
     $("#answerScreen").show();
     $("#correctScreen").append(correctAnswers);
-    $("#incorrectScreen").append(incorretAnswers);
+    $("#incorrectScreen").append(incorrectAnswers);
 
 }); // end gradeQuiz
