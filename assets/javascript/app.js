@@ -109,6 +109,8 @@ var countdown = function(seconds) {
         // displays a timeout box if the time = 0
         if (seconds <= 0){
             $(".container").fadeOut(500);
+            $(".questions").hide();
+
             var correctAnswers = 0;
             var incorretAnswers = 0;
             for (var i = 0; i < 10; i++){
@@ -134,7 +136,7 @@ var countdown = function(seconds) {
             return;
 
         }
-    }, 1000);
+    }, 100);
     //ends the timer function
 
     // clear timer on submit click
